@@ -83,14 +83,21 @@ def refine_fields(rec: dict, problems: set[str], title_crop: np.ndarray, provide
     ask = {"smolvlm": _ask_smolvlm, "anthropic": _ask_anthropic}[provider]
     img = Image.fromarray(title_crop)
     log = meta.setdefault("vlm", [])
+    answers = {}
     for f in sorted(problems):
         if f not in FIELD_LABEL:
             continue
-        label = FIELD_LABEL[f]
         try:
-            ans = ask(img, _question(label))
+            answers[f] = ask(img, _question(FIELD_LABEL[f]))
         except Exception as e:  # network/model failure must not kill the pipeline
             log.append({"field": f, "error": repr(e)[:200]})
+    # degenerate-output guard: the same answer for different fields means the model is not reading the labels
+    norm = lambda x: re.sub(r"[^A-Z0-9]", "", x.upper())  # noqa: E731
+    dup = {v for v in map(norm, answers.values()) if list(map(norm, answers.values())).count(v) > 1}
+    for f, ans in answers.items():
+        label = FIELD_LABEL[f]
+        if norm(ans) in dup:
+            log.append({"field": f, "answer": ans[:80], "accepted": False, "reason": "same answer given for several fields"})
             continue
         clean = re.sub(r"^\s*(answer|value)\s*:\s*", "", ans, flags=re.I).strip().rstrip(".").strip()
         parsed = parse.parse_title_block([f"{label}: {clean}"]).get(f)

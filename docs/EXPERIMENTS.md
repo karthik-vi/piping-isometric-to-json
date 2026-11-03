@@ -12,11 +12,31 @@ wrong drawings that the validator put in `needs_review`.
 
 ---
 
-## EXP-005 — VLM re-read of flagged fields (SmolVLM-256M, local CPU) — test
+## EXP-006 — Guarded VLM stage (after EXP-005 failure) — test
 
-- **Hypothesis.** Fields that still fail validation after the rules are often readable by a small VLM; gated acceptance means it cannot make things worse.
-- **Config.** Variant F = E2 + `vlm_provider=smolvlm`, model `HuggingFaceTB/SmolVLM-256M-Instruct`, greedy decoding, max 24 new tokens, one question per failing title-block field. Single worker.
-- **Result.** See `results/test_vlm.json`; summary table is added to the README *Results* section once this run finished (this entry is updated in the same commit).
+- **Change.** (1) VLM-sourced values are never used to repair other fields; (2) new cross-field rule: nominal size must equal the majority
+  size token in the BOM; (3) if the VLM returns the same answer for several different fields, all those answers are rejected.
+- **Result (test, n=60, `results/test_vlm_guarded.json`).**
+
+| Variant | Field EM | Drawing EM | Tags F1 | Dims F1 | BOM F1 | Err-flag |
+|---|---|---|---|---|---|---|
+| E2 rules only (re-run with rule 2) | 0.930 | 0.550 | 0.950 | 0.953 | 0.920 | 0.37 |
+| **F guarded SmolVLM** | **0.935** | **0.567** | 0.950 | 0.953 | **0.920** | 0.27 |
+
+  The VLM fixed 3 fields on 3 scanned drawings (2 × drawing_number, 1 × revision) and broke nothing. Scanned drawing EM 0.292 → 0.333;
+  clean drawings unchanged (0.722). Rule 2 did not change E2's numbers.
+- **Cost.** One SmolVLM call per failing title-block field; wall time for 60 drawings 1,070 s single-process on a shared 4-vCPU box
+  (vs ~180–420 s for E2 with 4 processes). The VLM is ~10× slower per drawing than the rules for +1.7 points drawing EM.
+- **Next.** Try a stronger VLM via the Anthropic provider (implemented, not run: no key in this environment).
+
+## EXP-005 — Unguarded VLM re-read (SmolVLM-256M, local CPU) — test — FAILURE CASE
+
+- **Hypothesis.** A small VLM can re-read title-block fields that still fail validation; gated acceptance means it cannot make things worse.
+- **Config.** Variant F = E2 + `vlm_provider=smolvlm` (`HuggingFaceTB/SmolVLM-256M-Instruct`, greedy, ≤24 new tokens, one question per failing field).
+- **Result.** Drawing EM 0.550 → 0.567 and field EM 0.930 → 0.937, **but BOM F1 dropped 0.920 → 0.898**.
+- **Why (iso_0028_scan).** The model degenerated and answered "16", "116", "11" for unrelated fields. Size = 16 passed validation because the
+  line number was unreadable (nothing to contradict it), and the repair stage then rewrote every BOM description to `16IN`.
+  The validation gate was necessary but not sufficient: an accepted wrong value propagated. Fixed in EXP-006.
 
 ## EXP-004b — Deterministic tag-prefix snapping (bug fix) — test
 

@@ -243,6 +243,8 @@ def _repair(rec: dict, line_votes: Counter, meta: dict) -> None:
             prov["material"] = "rule:piping_class_table"
     # BOM: unit vocabulary, size suffix, item numbering
     size = rec.get("nominal_size_in")
+    if str(prov.get("nominal_size_in", "")).startswith("vlm:"):
+        size = None  # never propagate a VLM-sourced value into other fields
     for i, r in enumerate(rec["bom"], start=1):
         toks = r["description"].split()
         size_tok = toks[-1] if toks and re.fullmatch(r"[0-9ILS|]*[I1L]?N", toks[-1]) else None
@@ -281,6 +283,11 @@ def validate(rec: dict) -> set[str]:
             bad.add("pipe_spec")
     if rec.get("pipe_spec") in C.PIPING_CLASS_TABLE and rec.get("material") != C.PIPING_CLASS_TABLE[rec["pipe_spec"]]:
         bad.add("material")
+    sizes = Counter(m.group(1) for r in rec.get("bom", []) if (m := re.search(r"(\d+)IN$", r.get("description", ""))))
+    if sizes and rec.get("nominal_size_in") is not None:
+        top, n = sizes.most_common(1)[0]
+        if n >= 2 and str(rec["nominal_size_in"]) != top:
+            bad.add("nominal_size_in")
     return bad
 
 

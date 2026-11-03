@@ -70,6 +70,7 @@ Docker: `docker build -t iso2json . && docker run --rm iso2json`.
 | C + layout, preprocessing, row-wise tables | 0.898 | 0.000 | 0.910 | 0.021 | 0.819 |
 | D + multi-rotation OCR | 0.898 | 0.200 | 0.910 | 0.952 | 0.819 |
 | **E2 full rules (default, no VLM)** | **0.930** | **0.550** | **0.950** | **0.953** | **0.920** |
+| F E2 + guarded SmolVLM-256M re-read (opt-in) | 0.935 | 0.567 | 0.950 | 0.953 | 0.920 |
 
 Clean drawings: field EM 1.000, drawing EM 0.722. Scanned: field EM 0.824, drawing EM 0.292. Full table, VLM run and
 per-field numbers: `docs/EXPERIMENTS.md`.
@@ -83,6 +84,8 @@ per-field numbers: `docs/EXPERIMENTS.md`.
 - **Tags (11).** Prefix destroyed on scans (`|-3964` for `PI-3964`); occasionally a digit swap (`FT-3394` for `FT-5394`) that passes the tag grammar.
 - **Title block on scans.** `drawing_number`, `revision`, design temp/pressure are short tokens with no cross-field check, so OCR slips there
   (`ISO-174-691`, `REV 20`) are only caught when the grammar breaks.
+- **VLM hallucination (EXP-005).** Unguarded, SmolVLM answered "16" for several fields; the size was accepted and propagated into
+  every BOM row. Guards added in EXP-006 (no VLM value feeds repairs, BOM-size cross-check, duplicate-answer rejection).
 - **Validator coverage.** It flags 37% of wrong drawings and 0% of correct ones. `needs_review` is trustworthy; `valid=true` is not a guarantee.
 
 ## Limitations
