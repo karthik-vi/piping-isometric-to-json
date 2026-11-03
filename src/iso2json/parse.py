@@ -134,10 +134,10 @@ def parse_tag(t: str, fuzzy_prefix: bool = True) -> str | None:
     pre, num = t.split("-", 1)
     pre = pre.translate(C.ALPHA_FIX)
     if fuzzy_prefix and pre not in C.TAG_PREFIXES and 2 <= len(pre) <= 3:
-        same_len = [p for p in C.TAG_PREFIXES if len(p) == len(pre)]
-        m = difflib.get_close_matches(pre, same_len, n=1, cutoff=0.5)
-        if m:
-            pre = m[0]
+        # positional match against same-length prefixes; snap only to a unique best with >= half the letters right
+        scores = sorted(((sum(a == b for a, b in zip(pre, p)), p) for p in C.TAG_PREFIXES if len(p) == len(pre)), reverse=True)
+        if scores and scores[0][0] * 2 >= len(pre) and (len(scores) == 1 or scores[0][0] > scores[1][0]):
+            pre = scores[0][1]
     cand = f"{pre}-{num.translate(C.DIGIT_FIX)}"
     return cand if C.TAG_RE.fullmatch(cand) else None
 

@@ -25,7 +25,8 @@ def test_title_block_missing_colon():
 
 
 def test_tags_and_dims():
-    assert parse.parse_tag("UT-1541") == "LT-1541"  # fuzzy prefix snap
+    assert parse.parse_tag("HY-315") == "HV-315"  # unique positional prefix match
+    assert parse.parse_tag("UT-1541") is None  # ambiguous (LT/FT): do not guess
     assert parse.parse_tag("PSV5988") == "PSV-5988"  # lost dash
     assert parse.parse_tag("hello") is None
     assert parse.parse_dim("4550") == 4550

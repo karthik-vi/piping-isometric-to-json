@@ -18,6 +18,17 @@ wrong drawings that the validator put in `needs_review`.
 - **Config.** Variant F = E2 + `vlm_provider=smolvlm`, model `HuggingFaceTB/SmolVLM-256M-Instruct`, greedy decoding, max 24 new tokens, one question per failing title-block field. Single worker.
 - **Result.** See `results/test_vlm.json`; summary table is added to the README *Results* section once this run finished (this entry is updated in the same commit).
 
+## EXP-004b — Deterministic tag-prefix snapping (bug fix) — test
+
+- **What happened.** A unit test showed `UT-1541` snapping to `TW-1541`: `difflib.get_close_matches` returned a 3-way tie (LT/FT/TW all ratio 0.5)
+  and broke it by string order. Replaced with positional matching that only snaps to a *unique* best prefix and refuses ties.
+  This was driven by the unit test, not by test-set results; E2 was re-run once on test afterwards. Both numbers are kept.
+- **Result (test, n=60).** E2 before fix: drawing EM 0.533, tags F1 0.948. After fix: **drawing EM 0.550, tags F1 0.950** (P 0.985, R 0.919);
+  all other metrics unchanged (field EM 0.930, dims F1 0.953, BOM F1 0.920). Clean drawing EM 0.722, scanned 0.292. Err-flag 0.37.
+  Raw: `results/test_e2_prefixfix.json` (before: `results/test_ablation_pre_prefixfix.json`).
+- **Note.** Median latency in this re-run was 21.8 s/drawing because landmark extraction for another project was running on the same 4 CPUs;
+  the uncontended figure is the 8.9 s from EXP-004.
+
 ## EXP-004 — Full ablation on the held-out test set — test (seed 2, n=60)
 
 - **Hypothesis.** Each stage adds measurable accuracy; layout + preprocessing matter most for title block/BOM, multi-rotation OCR for dimensions.
@@ -74,4 +85,4 @@ material 0.983, design_pressure 0.917, design_temp 0.900, revision 0.883, tags 0
 
 ## Resume-claim comparison
 
-> Resume claim: 95%+ exact match | Reproduced here on synthetic isometrics (generator seed 2, n=60, 40% scanned): 93.0% field-level exact match (100.0% on the 36 clean drawings, 82.4% on the 24 scanned); 53.3% drawing-level exact match (every field incl. all tags, dimensions and BOM rows) | Gap / why: the original metric's definition and data (real client drawings) are not available; this synthetic set is cleaner in layout but harsher in scan noise than typical vector-PDF isometrics, and drawing-level exact match is a much stricter metric than field-level.
+> Resume claim: 95%+ exact match | Reproduced here on synthetic isometrics (generator seed 2, n=60, 40% scanned): 93.0% field-level exact match (100.0% on the 36 clean drawings, 82.4% on the 24 scanned); 55.0% drawing-level exact match (every field incl. all tags, dimensions and BOM rows) | Gap / why: the original metric's definition and data (real client drawings) are not available; this synthetic set is cleaner in layout but harsher in scan noise than typical vector-PDF isometrics, and drawing-level exact match is a much stricter metric than field-level.
