@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Piping isometric extraction (synthetic demo schema)",
+  "type": "object",
+  "required": ["drawing_number", "line_number", "nominal_size_in", "service", "pipe_spec", "material",
+               "design_pressure_barg", "design_temp_c", "revision", "bom", "tags", "dimensions_mm"],
+  "properties": {
+    "drawing_number": {"type": ["string", "null"], "pattern": "^ISO-\\d{3}-\\d{2}$"},
+    "line_number": {"type": ["string", "null"], "pattern": "^\\d{1,2}-[A-Z]{1,2}-\\d{4}-[A-Z]\\d[A-Z]$"},
+    "nominal_size_in": {"type": ["number", "null"], "exclusiveMinimum": 0, "maximum": 48},
+    "service": {"type": ["string", "null"], "pattern": "^[A-Z]{1,2}$"},
+    "pipe_spec": {"type": ["string", "null"], "pattern": "^[A-Z]\\d[A-Z]$"},
+    "material": {"type": ["string", "null"]},
+    "design_pressure_barg": {"type": ["number", "null"], "minimum": 0, "maximum": 420},
+    "design_temp_c": {"type": ["number", "null"], "minimum": -196, "maximum": 600},
+    "revision": {"type": ["string", "null"], "pattern": "^[0-9A-Z]{1,2}$"},
+    "bom": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item", "qty", "unit", "description"],
+        "properties": {
+          "item": {"type": "integer", "minimum": 1},
+          "qty": {"type": "integer", "minimum": 1},
+          "unit": {"enum": ["EA", "M", "SET"]},
+          "description": {"type": "string", "minLength": 3}
+        }
+      }
+    },
+    "tags": {"type": "array", "items": {"type": "string", "pattern": "^[A-Z]{2,3}-\\d{3,4}$"}},
+    "dimensions_mm": {"type": "array", "items": {"type": "integer", "minimum": 100, "maximum": 20000}},
+    "_meta": {"type": "object"}
+  }
+}

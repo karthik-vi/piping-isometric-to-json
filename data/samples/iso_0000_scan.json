@@ -1,0 +1,67 @@
+{
+  "drawing_number": "ISO-471-74",
+  "line_number": "3-N-1022-A1A",
+  "nominal_size_in": 3,
+  "service": "N",
+  "pipe_spec": "A1A",
+  "material": "CS A106-B",
+  "design_pressure_barg": 19.6,
+  "design_temp_c": 250,
+  "revision": "1",
+  "bom": [
+    {
+      "item": 1,
+      "qty": 6,
+      "unit": "EA",
+      "description": "FLANGE WN RF 3IN"
+    },
+    {
+      "item": 2,
+      "qty": 2,
+      "unit": "EA",
+      "description": "REDUCER CONC 3IN"
+    },
+    {
+      "item": 3,
+      "qty": 3,
+      "unit": "SET",
+      "description": "STUD BOLT 3IN"
+    },
+    {
+      "item": 4,
+      "qty": 30,
+      "unit": "M",
+      "description": "PIPE SMLS BE 3IN"
+    },
+    {
+      "item": 5,
+      "qty": 1,
+      "unit": "EA",
+      "description": "GATE VALVE 3IN"
+    },
+    {
+      "item": 6,
+      "qty": 7,
+      "unit": "EA",
+      "description": "ELBOW 90 LR 3IN"
+    },
+    {
+      "item": 7,
+      "qty": 3,
+      "unit": "EA",
+      "description": "TEE EQUAL 3IN"
+    }
+  ],
+  "tags": [
+    "FT-1031",
+    "HV-441",
+    "PI-9501",
+    "TI-5240"
+  ],
+  "dimensions_mm": [
+    1450,
+    2100,
+    2150,
+    4100
+  ]
+}

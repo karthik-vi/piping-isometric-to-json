@@ -1,0 +1,62 @@
+{
+  "drawing_number": "ISO-298-70",
+  "line_number": "12-P-2342-A1A",
+  "nominal_size_in": 12,
+  "service": "P",
+  "pipe_spec": "A1A",
+  "material": "CS A106-B",
+  "design_pressure_barg": 25.0,
+  "design_temp_c": 150,
+  "revision": "1",
+  "bom": [
+    {
+      "item": 1,
+      "qty": 2,
+      "unit": "EA",
+      "description": "REDUCER CONC 12IN"
+    },
+    {
+      "item": 2,
+      "qty": 15,
+      "unit": "M",
+      "description": "PIPE SMLS BE 12IN"
+    },
+    {
+      "item": 3,
+      "qty": 1,
+      "unit": "EA",
+      "description": "TEE EQUAL 12IN"
+    },
+    {
+      "item": 4,
+      "qty": 4,
+      "unit": "EA",
+      "description": "FLANGE WN RF 12IN"
+    },
+    {
+      "item": 5,
+      "qty": 2,
+      "unit": "EA",
+      "description": "ELBOW 90 LR 12IN"
+    },
+    {
+      "item": 6,
+      "qty": 2,
+      "unit": "EA",
+      "description": "GATE VALVE 12IN"
+    }
+  ],
+  "tags": [
+    "FT-1220",
+    "HV-9944",
+    "TW-4122"
+  ],
+  "dimensions_mm": [
+    800,
+    1650,
+    2600,
+    3700,
+    4050,
+    4350
+  ]
+}

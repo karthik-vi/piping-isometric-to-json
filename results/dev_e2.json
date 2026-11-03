@@ -1,0 +1,272 @@
+{
+  "data": "data/synthetic/dev",
+  "n": 30,
+  "variants": {
+    "E": {
+      "desc": "+ cross-field validation/repair (full rules)",
+      "config": {
+        "tag_rules": false,
+        "dual_read": false
+      },
+      "n": 30,
+      "field_exact_match": {
+        "drawing_number": 0.9333333333333333,
+        "line_number": 0.9333333333333333,
+        "nominal_size_in": 1.0,
+        "service": 0.9666666666666667,
+        "pipe_spec": 1.0,
+        "material": 1.0,
+        "design_pressure_barg": 0.9,
+        "design_temp_c": 0.9333333333333333,
+        "revision": 0.9333333333333333,
+        "tags": 0.4666666666666667,
+        "dimensions_mm": 0.6666666666666666,
+        "bom": 0.9
+      },
+      "scalar_field_exact_match_micro": 0.9555555555555556,
+      "drawing_exact_match": 0.23333333333333334,
+      "scalar_block_exact_match": 0.8333333333333334,
+      "tags_f1": 0.8756218905472637,
+      "tags_precision": 0.967032967032967,
+      "tags_recall": 0.8,
+      "dimensions_mm_f1": 0.9639344262295082,
+      "dimensions_mm_precision": 0.98,
+      "dimensions_mm_recall": 0.9483870967741935,
+      "bom_f1": 0.9719626168224299,
+      "bom_precision": 0.975,
+      "bom_recall": 0.968944099378882,
+      "error_drawings_flagged_rate": 0.21739130434782608,
+      "correct_drawings_flagged_rate": 0.0,
+      "latency_s_median": 10.676,
+      "clean": {
+        "n": 11,
+        "drawing_exact_match": 0.36363636363636365,
+        "scalar_field_exact_match_micro": 0.9797979797979798,
+        "tags_f1": 0.9249999999999999,
+        "dimensions_mm_f1": 0.9915966386554621,
+        "bom_f1": 1.0
+      },
+      "scanned": {
+        "n": 19,
+        "drawing_exact_match": 0.15789473684210525,
+        "scalar_field_exact_match_micro": 0.9415204678362573,
+        "tags_f1": 0.8429752066115703,
+        "dimensions_mm_f1": 0.946236559139785,
+        "bom_f1": 0.9577464788732395
+      },
+      "failures": {
+        "iso_0000_scan.png": [
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0001.png": [
+          "tags"
+        ],
+        "iso_0002.png": [
+          "dimensions_mm"
+        ],
+        "iso_0003_scan.png": [
+          "drawing_number",
+          "design_pressure_barg",
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0004_scan.png": [
+          "dimensions_mm"
+        ],
+        "iso_0005_scan.png": [
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0006.png": [
+          "tags"
+        ],
+        "iso_0008_scan.png": [
+          "drawing_number",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags"
+        ],
+        "iso_0010.png": [
+          "line_number",
+          "service"
+        ],
+        "iso_0011_scan.png": [
+          "bom"
+        ],
+        "iso_0012.png": [
+          "tags"
+        ],
+        "iso_0013_scan.png": [
+          "tags"
+        ],
+        "iso_0014_scan.png": [
+          "tags",
+          "bom"
+        ],
+        "iso_0015.png": [
+          "tags"
+        ],
+        "iso_0016_scan.png": [
+          "tags"
+        ],
+        "iso_0019_scan.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0020_scan.png": [
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0022.png": [
+          "tags"
+        ],
+        "iso_0024_scan.png": [
+          "line_number",
+          "tags"
+        ],
+        "iso_0026_scan.png": [
+          "dimensions_mm"
+        ],
+        "iso_0027_scan.png": [
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0028_scan.png": [
+          "dimensions_mm"
+        ],
+        "iso_0029_scan.png": [
+          "tags"
+        ]
+      },
+      "wall_s": 83.7
+    },
+    "E2": {
+      "desc": "+ tag rules (fuzzy prefix, fragment merge, dual read)",
+      "config": {},
+      "n": 30,
+      "field_exact_match": {
+        "drawing_number": 0.9333333333333333,
+        "line_number": 0.9333333333333333,
+        "nominal_size_in": 1.0,
+        "service": 0.9666666666666667,
+        "pipe_spec": 1.0,
+        "material": 1.0,
+        "design_pressure_barg": 0.9,
+        "design_temp_c": 0.9333333333333333,
+        "revision": 0.9333333333333333,
+        "tags": 0.6666666666666666,
+        "dimensions_mm": 0.7,
+        "bom": 0.9
+      },
+      "scalar_field_exact_match_micro": 0.9555555555555556,
+      "drawing_exact_match": 0.4,
+      "scalar_block_exact_match": 0.8333333333333334,
+      "tags_f1": 0.9357798165137615,
+      "tags_precision": 0.9444444444444444,
+      "tags_recall": 0.9272727272727272,
+      "dimensions_mm_f1": 0.9671052631578947,
+      "dimensions_mm_precision": 0.9865771812080537,
+      "dimensions_mm_recall": 0.9483870967741935,
+      "bom_f1": 0.9719626168224299,
+      "bom_precision": 0.975,
+      "bom_recall": 0.968944099378882,
+      "error_drawings_flagged_rate": 0.2777777777777778,
+      "correct_drawings_flagged_rate": 0.0,
+      "latency_s_median": 9.469,
+      "clean": {
+        "n": 11,
+        "drawing_exact_match": 0.6363636363636364,
+        "scalar_field_exact_match_micro": 0.9797979797979798,
+        "tags_f1": 0.9647058823529412,
+        "dimensions_mm_f1": 0.9915966386554621,
+        "bom_f1": 1.0
+      },
+      "scanned": {
+        "n": 19,
+        "drawing_exact_match": 0.2631578947368421,
+        "scalar_field_exact_match_micro": 0.9415204678362573,
+        "tags_f1": 0.9172932330827067,
+        "dimensions_mm_f1": 0.9513513513513514,
+        "bom_f1": 0.9577464788732395
+      },
+      "failures": {
+        "iso_0000_scan.png": [
+          "dimensions_mm"
+        ],
+        "iso_0001.png": [
+          "tags"
+        ],
+        "iso_0002.png": [
+          "dimensions_mm"
+        ],
+        "iso_0003_scan.png": [
+          "drawing_number",
+          "design_pressure_barg",
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0004_scan.png": [
+          "dimensions_mm"
+        ],
+        "iso_0005_scan.png": [
+          "dimensions_mm"
+        ],
+        "iso_0008_scan.png": [
+          "drawing_number",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags"
+        ],
+        "iso_0010.png": [
+          "line_number",
+          "service"
+        ],
+        "iso_0011_scan.png": [
+          "tags",
+          "bom"
+        ],
+        "iso_0012.png": [
+          "tags"
+        ],
+        "iso_0013_scan.png": [
+          "tags"
+        ],
+        "iso_0014_scan.png": [
+          "tags",
+          "bom"
+        ],
+        "iso_0019_scan.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0020_scan.png": [
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0024_scan.png": [
+          "line_number",
+          "tags"
+        ],
+        "iso_0026_scan.png": [
+          "dimensions_mm"
+        ],
+        "iso_0027_scan.png": [
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags"
+        ],
+        "iso_0028_scan.png": [
+          "dimensions_mm"
+        ]
+      },
+      "wall_s": 75.3
+    }
+  }
+}

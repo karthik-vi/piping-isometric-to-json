@@ -1,0 +1,6 @@
+# Optional VLM stage (local SmolVLM). CPU torch: pip install --index-url https://download.pytorch.org/whl/cpu torch==2.15.0
+torch==2.15.0
+transformers==5.22.1
+num2words
+# Optional Anthropic provider
+anthropic

@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+# generated data / outputs (regenerate with scripts/generate_dataset.py)
+data/synthetic/
+out/
+# model weights / caches
+*.pt
+*.bin
+*.safetensors
+.cache/
+hf_cache/
