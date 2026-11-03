@@ -7,7 +7,7 @@ OCR → rule-based parsing/filtering → cross-field validation & repair → opt
 
 | | |
 |---|---|
-| **Reconstructs** | Resume bullet (Marvel Technology Solutions, AI/ML Engineer Intern, Jun 2026–present): *multi-stage pipeline fusing OCR, rule-based filtering, and Vision-Language Models to convert piping isometrics into structured JSON.* |
+| **Reconstructs** | Resume bullet (Marvel Technology Solutions, AI/ML Engineer Intern, Jun 2026–present): *"Engineered a multi-stage pipeline fusing OCR, rule-based filtering, and Vision-Language Models to convert piping isometrics into structured JSON, achieving 95%+ exact match and 97% F1."* (verbatim from the resume, the source of truth) |
 | **Is** | A portfolio reconstruction written from scratch in this repo, run on **synthetic** isometrics produced by `src/iso2json/generator.py`. All metrics below were measured here (`docs/EXPERIMENTS.md`). |
 | **Is not** | Marvel's code, Marvel's or any client's drawings, or a production system. No client name, drawing, spec table or internal tool is used. The piping-class table, tag prefixes and BOM catalog are generic, invented values. |
 | **Data** | Synthetic only (no public labelled isometric dataset was found; see `docs/DATA.md`). |
@@ -76,6 +76,8 @@ Clean drawings: field EM 1.000, drawing EM 0.722. Scanned: field EM 0.824, drawi
 per-field numbers: `docs/EXPERIMENTS.md`.
 
 > Resume claim: 95%+ exact match | Reproduced here on synthetic isometrics (seed 2, n=60): 93.0% field-level exact match (100.0% clean / 82.4% scanned), 55.0% drawing-level exact match | Gap / why: original data and metric definition unavailable; synthetic scans are noisier than vector PDFs; drawing-level EM is far stricter than field-level.
+
+> Resume claim: 97% F1 | Reproduced here on the same synthetic test set (n=60), variant E2: tags F1 95.0%, dimensions F1 95.3%, BOM-row F1 92.0% (no single pooled F1 is computed; the resume's F1 definition is not available) | Gap / why: same as above; the original F1 definition (which fields, micro vs macro) is unknown, so only per-field F1 is reported.
 
 ### Failure cases (E2, test)
 

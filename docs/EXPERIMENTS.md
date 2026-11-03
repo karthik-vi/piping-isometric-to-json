@@ -106,3 +106,5 @@ material 0.983, design_pressure 0.917, design_temp 0.900, revision 0.883, tags 0
 ## Resume-claim comparison
 
 > Resume claim: 95%+ exact match | Reproduced here on synthetic isometrics (generator seed 2, n=60, 40% scanned): 93.0% field-level exact match (100.0% on the 36 clean drawings, 82.4% on the 24 scanned); 55.0% drawing-level exact match (every field incl. all tags, dimensions and BOM rows) | Gap / why: the original metric's definition and data (real client drawings) are not available; this synthetic set is cleaner in layout but harsher in scan noise than typical vector-PDF isometrics, and drawing-level exact match is a much stricter metric than field-level.
+
+> Resume claim: 97% F1 | Reproduced here on the same synthetic test set (n=60), variant E2 (EXP-004b): tags F1 95.0%, dimensions F1 95.3%, BOM-row F1 92.0% (no single pooled F1 is computed; the resume's F1 definition is not available) | Gap / why: same as above; the original F1 definition (which fields, micro vs macro) is unknown, so only per-field F1 is reported.
