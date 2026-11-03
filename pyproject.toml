@@ -1,0 +1,9 @@
+[project]
+name = "iso2json"
+version = "0.1.0"
+description = "Synthetic-data reconstruction of a piping-isometric -> structured JSON pipeline (OCR + rules + VLM)"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

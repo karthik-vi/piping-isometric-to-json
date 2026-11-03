@@ -1,0 +1,2342 @@
+{
+  "data": "data/synthetic/test",
+  "n": 60,
+  "variants": {
+    "A": {
+      "desc": "full-page OCR + regex (baseline)",
+      "config": {
+        "use_layout": false,
+        "rotations": [
+          0
+        ],
+        "use_repair": false,
+        "preprocess": false,
+        "table_rows": false,
+        "dim_filter": false,
+        "tag_rules": false,
+        "dual_read": false
+      },
+      "n": 60,
+      "field_exact_match": {
+        "drawing_number": 0.0,
+        "line_number": 0.0,
+        "nominal_size_in": 0.0,
+        "service": 0.0,
+        "pipe_spec": 0.0,
+        "material": 0.0,
+        "design_pressure_barg": 0.016666666666666666,
+        "design_temp_c": 0.0,
+        "revision": 0.0,
+        "tags": 0.7333333333333333,
+        "dimensions_mm": 0.0,
+        "bom": 0.0
+      },
+      "scalar_field_exact_match_micro": 0.001851851851851852,
+      "drawing_exact_match": 0.0,
+      "scalar_block_exact_match": 0.0,
+      "tags_f1": 0.9282051282051282,
+      "tags_precision": 1.0,
+      "tags_recall": 0.8660287081339713,
+      "dimensions_mm_f1": 0.009174311926605505,
+      "dimensions_mm_precision": 0.024691358024691357,
+      "dimensions_mm_recall": 0.005633802816901409,
+      "bom_f1": 0.0,
+      "bom_precision": 0.0,
+      "bom_recall": 0.0,
+      "error_drawings_flagged_rate": 1.0,
+      "correct_drawings_flagged_rate": 0.0,
+      "latency_s_median": 1.376,
+      "clean": {
+        "n": 36,
+        "drawing_exact_match": 0.0,
+        "scalar_field_exact_match_micro": 0.0,
+        "tags_f1": 0.9841269841269841,
+        "dimensions_mm_f1": 0.015444015444015446,
+        "bom_f1": 0.0
+      },
+      "scanned": {
+        "n": 24,
+        "drawing_exact_match": 0.0,
+        "scalar_field_exact_match_micro": 0.004629629629629629,
+        "tags_f1": 0.8260869565217391,
+        "dimensions_mm_f1": 0.0,
+        "bom_f1": 0.0
+      },
+      "failures": {
+        "iso_0000.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0001.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0002_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0003_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0004.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0005.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0006.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0007_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0008.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0009.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0010.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0011_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0012_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0013_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0014.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0015.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0016.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0017.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0018_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0019_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0020_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0021_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0022_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0023_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0024_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0025.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0026.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0027.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0028_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0029_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0030_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0031_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0032.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0033.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0034.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0035_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0036.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0037.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0038.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0039.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0040.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0041.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0042_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0043.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0044.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0045_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0046.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0047.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0048_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0049.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0050_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0051.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0052.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0053.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0054_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0055.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0056.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0057_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0058.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0059.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ]
+      },
+      "wall_s": 21.5
+    },
+    "B": {
+      "desc": "+ layout crops",
+      "config": {
+        "rotations": [
+          0
+        ],
+        "use_repair": false,
+        "preprocess": false,
+        "table_rows": false,
+        "dim_filter": false,
+        "tag_rules": false,
+        "dual_read": false
+      },
+      "n": 60,
+      "field_exact_match": {
+        "drawing_number": 0.8166666666666667,
+        "line_number": 0.7333333333333333,
+        "nominal_size_in": 0.6666666666666666,
+        "service": 0.7333333333333333,
+        "pipe_spec": 0.7666666666666667,
+        "material": 0.7,
+        "design_pressure_barg": 0.7166666666666667,
+        "design_temp_c": 0.75,
+        "revision": 0.7166666666666667,
+        "tags": 0.6833333333333333,
+        "dimensions_mm": 0.0,
+        "bom": 0.35
+      },
+      "scalar_field_exact_match_micro": 0.7333333333333333,
+      "drawing_exact_match": 0.0,
+      "scalar_block_exact_match": 0.6166666666666667,
+      "tags_f1": 0.8947368421052633,
+      "tags_precision": 0.9941520467836257,
+      "tags_recall": 0.8133971291866029,
+      "dimensions_mm_f1": 0.010230179028132991,
+      "dimensions_mm_precision": 0.05555555555555555,
+      "dimensions_mm_recall": 0.005633802816901409,
+      "bom_f1": 0.6290909090909091,
+      "bom_precision": 0.7554585152838428,
+      "bom_recall": 0.5389408099688473,
+      "error_drawings_flagged_rate": 0.4666666666666667,
+      "correct_drawings_flagged_rate": 0.0,
+      "latency_s_median": 0.804,
+      "clean": {
+        "n": 36,
+        "drawing_exact_match": 0.0,
+        "scalar_field_exact_match_micro": 1.0,
+        "tags_f1": 0.9881422924901185,
+        "dimensions_mm_f1": 0.017094017094017096,
+        "bom_f1": 0.8541114058355438
+      },
+      "scanned": {
+        "n": 24,
+        "drawing_exact_match": 0.0,
+        "scalar_field_exact_match_micro": 0.3333333333333333,
+        "tags_f1": 0.7086614173228347,
+        "dimensions_mm_f1": 0.0,
+        "bom_f1": 0.13872832369942198
+      },
+      "failures": {
+        "iso_0000.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0001.png": [
+          "dimensions_mm"
+        ],
+        "iso_0002_scan.png": [
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0003_scan.png": [
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0004.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0005.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0006.png": [
+          "dimensions_mm"
+        ],
+        "iso_0007_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0008.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0009.png": [
+          "dimensions_mm"
+        ],
+        "iso_0010.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0011_scan.png": [
+          "nominal_size_in",
+          "pipe_spec",
+          "material",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0012_scan.png": [
+          "nominal_size_in",
+          "design_pressure_barg",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0013_scan.png": [
+          "material",
+          "design_temp_c",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0014.png": [
+          "dimensions_mm"
+        ],
+        "iso_0015.png": [
+          "dimensions_mm"
+        ],
+        "iso_0016.png": [
+          "dimensions_mm"
+        ],
+        "iso_0017.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0018_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0019_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0020_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0021_scan.png": [
+          "material",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0022_scan.png": [
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0023_scan.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0024_scan.png": [
+          "nominal_size_in",
+          "material",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0025.png": [
+          "dimensions_mm"
+        ],
+        "iso_0026.png": [
+          "dimensions_mm"
+        ],
+        "iso_0027.png": [
+          "dimensions_mm"
+        ],
+        "iso_0028_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0029_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0030_scan.png": [
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0031_scan.png": [
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0032.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0033.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0034.png": [
+          "dimensions_mm"
+        ],
+        "iso_0035_scan.png": [
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0036.png": [
+          "dimensions_mm"
+        ],
+        "iso_0037.png": [
+          "dimensions_mm"
+        ],
+        "iso_0038.png": [
+          "dimensions_mm"
+        ],
+        "iso_0039.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0040.png": [
+          "dimensions_mm"
+        ],
+        "iso_0041.png": [
+          "dimensions_mm"
+        ],
+        "iso_0042_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0043.png": [
+          "dimensions_mm"
+        ],
+        "iso_0044.png": [
+          "dimensions_mm"
+        ],
+        "iso_0045_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0046.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0047.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0048_scan.png": [
+          "drawing_number",
+          "nominal_size_in",
+          "pipe_spec",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0049.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0050_scan.png": [
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0051.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0052.png": [
+          "dimensions_mm"
+        ],
+        "iso_0053.png": [
+          "dimensions_mm"
+        ],
+        "iso_0054_scan.png": [
+          "drawing_number",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0055.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0056.png": [
+          "dimensions_mm"
+        ],
+        "iso_0057_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0058.png": [
+          "dimensions_mm"
+        ],
+        "iso_0059.png": [
+          "dimensions_mm",
+          "bom"
+        ]
+      },
+      "wall_s": 13.0
+    },
+    "C": {
+      "desc": "+ deskew/denoise/upscale + row-wise table OCR",
+      "config": {
+        "rotations": [
+          0
+        ],
+        "use_repair": false,
+        "dim_filter": false,
+        "tag_rules": false,
+        "dual_read": false
+      },
+      "n": 60,
+      "field_exact_match": {
+        "drawing_number": 0.85,
+        "line_number": 0.8666666666666667,
+        "nominal_size_in": 0.9166666666666666,
+        "service": 0.8666666666666667,
+        "pipe_spec": 0.9833333333333333,
+        "material": 0.9,
+        "design_pressure_barg": 0.9166666666666666,
+        "design_temp_c": 0.9,
+        "revision": 0.8833333333333333,
+        "tags": 0.65,
+        "dimensions_mm": 0.0,
+        "bom": 0.4
+      },
+      "scalar_field_exact_match_micro": 0.8981481481481481,
+      "drawing_exact_match": 0.0,
+      "scalar_block_exact_match": 0.75,
+      "tags_f1": 0.910025706940874,
+      "tags_precision": 0.9833333333333333,
+      "tags_recall": 0.84688995215311,
+      "dimensions_mm_f1": 0.020618556701030927,
+      "dimensions_mm_precision": 0.12121212121212122,
+      "dimensions_mm_recall": 0.011267605633802818,
+      "bom_f1": 0.8188976377952756,
+      "bom_precision": 0.8280254777070064,
+      "bom_recall": 0.8099688473520249,
+      "error_drawings_flagged_rate": 0.4166666666666667,
+      "correct_drawings_flagged_rate": 0.0,
+      "latency_s_median": 5.102,
+      "clean": {
+        "n": 36,
+        "drawing_exact_match": 0.0,
+        "scalar_field_exact_match_micro": 0.9938271604938271,
+        "tags_f1": 0.9841269841269841,
+        "dimensions_mm_f1": 0.02586206896551724,
+        "bom_f1": 0.8385416666666666
+      },
+      "scanned": {
+        "n": 24,
+        "drawing_exact_match": 0.0,
+        "scalar_field_exact_match_micro": 0.7546296296296297,
+        "tags_f1": 0.7737226277372262,
+        "dimensions_mm_f1": 0.012820512820512818,
+        "bom_f1": 0.7888446215139442
+      },
+      "failures": {
+        "iso_0000.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0001.png": [
+          "dimensions_mm"
+        ],
+        "iso_0002_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "material",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0003_scan.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0004.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0005.png": [
+          "dimensions_mm"
+        ],
+        "iso_0006.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0007_scan.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0008.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0009.png": [
+          "dimensions_mm"
+        ],
+        "iso_0010.png": [
+          "dimensions_mm"
+        ],
+        "iso_0011_scan.png": [
+          "material",
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0012_scan.png": [
+          "drawing_number",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0013_scan.png": [
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0014.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0015.png": [
+          "dimensions_mm"
+        ],
+        "iso_0016.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0017.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0018_scan.png": [
+          "drawing_number",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0019_scan.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0020_scan.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0021_scan.png": [
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0022_scan.png": [
+          "revision",
+          "dimensions_mm"
+        ],
+        "iso_0023_scan.png": [
+          "nominal_size_in",
+          "dimensions_mm"
+        ],
+        "iso_0024_scan.png": [
+          "material",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0025.png": [
+          "dimensions_mm"
+        ],
+        "iso_0026.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0027.png": [
+          "dimensions_mm"
+        ],
+        "iso_0028_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0029_scan.png": [
+          "drawing_number",
+          "line_number",
+          "service",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0030_scan.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0031_scan.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0032.png": [
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0033.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0034.png": [
+          "dimensions_mm"
+        ],
+        "iso_0035_scan.png": [
+          "line_number",
+          "service",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0036.png": [
+          "dimensions_mm"
+        ],
+        "iso_0037.png": [
+          "dimensions_mm"
+        ],
+        "iso_0038.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0039.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0040.png": [
+          "line_number",
+          "service",
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0041.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0042_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0043.png": [
+          "dimensions_mm"
+        ],
+        "iso_0044.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0045_scan.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0046.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0047.png": [
+          "dimensions_mm"
+        ],
+        "iso_0048_scan.png": [
+          "drawing_number",
+          "material",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0049.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0050_scan.png": [
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0051.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0052.png": [
+          "dimensions_mm"
+        ],
+        "iso_0053.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0054_scan.png": [
+          "drawing_number",
+          "line_number",
+          "service",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0055.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0056.png": [
+          "dimensions_mm"
+        ],
+        "iso_0057_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0058.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0059.png": [
+          "dimensions_mm"
+        ]
+      },
+      "wall_s": 79.4
+    },
+    "D": {
+      "desc": "+ multi-rotation drawing OCR + dim filter",
+      "config": {
+        "use_repair": false,
+        "tag_rules": false,
+        "dual_read": false
+      },
+      "n": 60,
+      "field_exact_match": {
+        "drawing_number": 0.85,
+        "line_number": 0.8666666666666667,
+        "nominal_size_in": 0.9166666666666666,
+        "service": 0.8666666666666667,
+        "pipe_spec": 0.9833333333333333,
+        "material": 0.9,
+        "design_pressure_barg": 0.9166666666666666,
+        "design_temp_c": 0.9,
+        "revision": 0.8833333333333333,
+        "tags": 0.65,
+        "dimensions_mm": 0.7,
+        "bom": 0.4
+      },
+      "scalar_field_exact_match_micro": 0.8981481481481481,
+      "drawing_exact_match": 0.2,
+      "scalar_block_exact_match": 0.75,
+      "tags_f1": 0.910025706940874,
+      "tags_precision": 0.9833333333333333,
+      "tags_recall": 0.84688995215311,
+      "dimensions_mm_f1": 0.9515418502202643,
+      "dimensions_mm_precision": 0.9938650306748467,
+      "dimensions_mm_recall": 0.9126760563380282,
+      "bom_f1": 0.8188976377952756,
+      "bom_precision": 0.8280254777070064,
+      "bom_recall": 0.8099688473520249,
+      "error_drawings_flagged_rate": 0.5208333333333334,
+      "correct_drawings_flagged_rate": 0.0,
+      "latency_s_median": 7.779,
+      "clean": {
+        "n": 36,
+        "drawing_exact_match": 0.3333333333333333,
+        "scalar_field_exact_match_micro": 0.9938271604938271,
+        "tags_f1": 0.9841269841269841,
+        "dimensions_mm_f1": 0.9784172661870503,
+        "bom_f1": 0.8385416666666666
+      },
+      "scanned": {
+        "n": 24,
+        "drawing_exact_match": 0.0,
+        "scalar_field_exact_match_micro": 0.7546296296296297,
+        "tags_f1": 0.7737226277372262,
+        "dimensions_mm_f1": 0.9090909090909091,
+        "bom_f1": 0.7888446215139442
+      },
+      "failures": {
+        "iso_0000.png": [
+          "bom"
+        ],
+        "iso_0001.png": [
+          "dimensions_mm"
+        ],
+        "iso_0002_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "material",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0003_scan.png": [
+          "tags",
+          "bom"
+        ],
+        "iso_0004.png": [
+          "bom"
+        ],
+        "iso_0006.png": [
+          "bom"
+        ],
+        "iso_0007_scan.png": [
+          "tags",
+          "bom"
+        ],
+        "iso_0008.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0010.png": [
+          "dimensions_mm"
+        ],
+        "iso_0011_scan.png": [
+          "material",
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0012_scan.png": [
+          "drawing_number",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0013_scan.png": [
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0014.png": [
+          "bom"
+        ],
+        "iso_0015.png": [
+          "dimensions_mm"
+        ],
+        "iso_0016.png": [
+          "bom"
+        ],
+        "iso_0017.png": [
+          "bom"
+        ],
+        "iso_0018_scan.png": [
+          "drawing_number",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0019_scan.png": [
+          "tags",
+          "bom"
+        ],
+        "iso_0020_scan.png": [
+          "tags",
+          "bom"
+        ],
+        "iso_0021_scan.png": [
+          "tags"
+        ],
+        "iso_0022_scan.png": [
+          "revision"
+        ],
+        "iso_0023_scan.png": [
+          "nominal_size_in",
+          "dimensions_mm"
+        ],
+        "iso_0024_scan.png": [
+          "material",
+          "bom"
+        ],
+        "iso_0026.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0028_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0029_scan.png": [
+          "drawing_number",
+          "line_number",
+          "service",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "bom"
+        ],
+        "iso_0030_scan.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0031_scan.png": [
+          "bom"
+        ],
+        "iso_0032.png": [
+          "tags"
+        ],
+        "iso_0033.png": [
+          "bom"
+        ],
+        "iso_0035_scan.png": [
+          "line_number",
+          "service",
+          "tags",
+          "bom"
+        ],
+        "iso_0038.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0039.png": [
+          "bom"
+        ],
+        "iso_0040.png": [
+          "line_number",
+          "service",
+          "tags"
+        ],
+        "iso_0041.png": [
+          "bom"
+        ],
+        "iso_0042_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "bom"
+        ],
+        "iso_0044.png": [
+          "bom"
+        ],
+        "iso_0045_scan.png": [
+          "tags",
+          "bom"
+        ],
+        "iso_0046.png": [
+          "bom"
+        ],
+        "iso_0048_scan.png": [
+          "drawing_number",
+          "material",
+          "bom"
+        ],
+        "iso_0049.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0050_scan.png": [
+          "tags"
+        ],
+        "iso_0051.png": [
+          "bom"
+        ],
+        "iso_0053.png": [
+          "bom"
+        ],
+        "iso_0054_scan.png": [
+          "drawing_number",
+          "line_number",
+          "service",
+          "material",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0055.png": [
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0057_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0058.png": [
+          "tags",
+          "bom"
+        ]
+      },
+      "wall_s": 122.9
+    },
+    "E": {
+      "desc": "+ cross-field validation/repair (full rules)",
+      "config": {
+        "tag_rules": false,
+        "dual_read": false
+      },
+      "n": 60,
+      "field_exact_match": {
+        "drawing_number": 0.85,
+        "line_number": 0.95,
+        "nominal_size_in": 0.95,
+        "service": 0.95,
+        "pipe_spec": 0.9833333333333333,
+        "material": 0.9833333333333333,
+        "design_pressure_barg": 0.9166666666666666,
+        "design_temp_c": 0.9,
+        "revision": 0.8833333333333333,
+        "tags": 0.65,
+        "dimensions_mm": 0.7,
+        "bom": 0.8333333333333334
+      },
+      "scalar_field_exact_match_micro": 0.9296296296296296,
+      "drawing_exact_match": 0.43333333333333335,
+      "scalar_block_exact_match": 0.8333333333333334,
+      "tags_f1": 0.910025706940874,
+      "tags_precision": 0.9833333333333333,
+      "tags_recall": 0.84688995215311,
+      "dimensions_mm_f1": 0.9515418502202643,
+      "dimensions_mm_precision": 0.9938650306748467,
+      "dimensions_mm_recall": 0.9126760563380282,
+      "bom_f1": 0.9196850393700787,
+      "bom_precision": 0.9299363057324841,
+      "bom_recall": 0.9096573208722741,
+      "error_drawings_flagged_rate": 0.29411764705882354,
+      "correct_drawings_flagged_rate": 0.0,
+      "latency_s_median": 8.231,
+      "clean": {
+        "n": 36,
+        "drawing_exact_match": 0.6666666666666666,
+        "scalar_field_exact_match_micro": 1.0,
+        "tags_f1": 0.9841269841269841,
+        "dimensions_mm_f1": 0.9784172661870503,
+        "bom_f1": 0.9895833333333334
+      },
+      "scanned": {
+        "n": 24,
+        "drawing_exact_match": 0.08333333333333333,
+        "scalar_field_exact_match_micro": 0.8240740740740741,
+        "tags_f1": 0.7737226277372262,
+        "dimensions_mm_f1": 0.9090909090909091,
+        "bom_f1": 0.8127490039840638
+      },
+      "failures": {
+        "iso_0001.png": [
+          "dimensions_mm"
+        ],
+        "iso_0002_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0003_scan.png": [
+          "tags"
+        ],
+        "iso_0006.png": [
+          "bom"
+        ],
+        "iso_0007_scan.png": [
+          "tags"
+        ],
+        "iso_0008.png": [
+          "dimensions_mm"
+        ],
+        "iso_0010.png": [
+          "dimensions_mm"
+        ],
+        "iso_0011_scan.png": [
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0012_scan.png": [
+          "drawing_number",
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0013_scan.png": [
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0015.png": [
+          "dimensions_mm"
+        ],
+        "iso_0018_scan.png": [
+          "drawing_number",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0019_scan.png": [
+          "tags",
+          "bom"
+        ],
+        "iso_0020_scan.png": [
+          "tags",
+          "bom"
+        ],
+        "iso_0021_scan.png": [
+          "tags"
+        ],
+        "iso_0022_scan.png": [
+          "revision"
+        ],
+        "iso_0023_scan.png": [
+          "dimensions_mm"
+        ],
+        "iso_0026.png": [
+          "dimensions_mm"
+        ],
+        "iso_0028_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0029_scan.png": [
+          "drawing_number",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "bom"
+        ],
+        "iso_0030_scan.png": [
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0032.png": [
+          "tags"
+        ],
+        "iso_0035_scan.png": [
+          "tags",
+          "bom"
+        ],
+        "iso_0038.png": [
+          "dimensions_mm"
+        ],
+        "iso_0040.png": [
+          "tags"
+        ],
+        "iso_0042_scan.png": [
+          "drawing_number",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "bom"
+        ],
+        "iso_0045_scan.png": [
+          "tags"
+        ],
+        "iso_0048_scan.png": [
+          "drawing_number",
+          "bom"
+        ],
+        "iso_0049.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0050_scan.png": [
+          "tags"
+        ],
+        "iso_0054_scan.png": [
+          "drawing_number",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm"
+        ],
+        "iso_0055.png": [
+          "dimensions_mm"
+        ],
+        "iso_0057_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0058.png": [
+          "tags"
+        ]
+      },
+      "wall_s": 131.6
+    },
+    "E2": {
+      "desc": "+ tag rules (fuzzy prefix, fragment merge, dual read)",
+      "config": {},
+      "n": 60,
+      "field_exact_match": {
+        "drawing_number": 0.85,
+        "line_number": 0.95,
+        "nominal_size_in": 0.95,
+        "service": 0.95,
+        "pipe_spec": 0.9833333333333333,
+        "material": 0.9833333333333333,
+        "design_pressure_barg": 0.9166666666666666,
+        "design_temp_c": 0.9,
+        "revision": 0.8833333333333333,
+        "tags": 0.8166666666666667,
+        "dimensions_mm": 0.7166666666666667,
+        "bom": 0.8333333333333334
+      },
+      "scalar_field_exact_match_micro": 0.9296296296296296,
+      "drawing_exact_match": 0.5333333333333333,
+      "scalar_block_exact_match": 0.8333333333333334,
+      "tags_f1": 0.9484029484029485,
+      "tags_precision": 0.9747474747474747,
+      "tags_recall": 0.9234449760765551,
+      "dimensions_mm_f1": 0.9529411764705883,
+      "dimensions_mm_precision": 0.9969230769230769,
+      "dimensions_mm_recall": 0.9126760563380282,
+      "bom_f1": 0.9196850393700787,
+      "bom_precision": 0.9299363057324841,
+      "bom_recall": 0.9096573208722741,
+      "error_drawings_flagged_rate": 0.35714285714285715,
+      "correct_drawings_flagged_rate": 0.0,
+      "latency_s_median": 8.872,
+      "clean": {
+        "n": 36,
+        "drawing_exact_match": 0.6944444444444444,
+        "scalar_field_exact_match_micro": 1.0,
+        "tags_f1": 0.9883268482490272,
+        "dimensions_mm_f1": 0.9784172661870503,
+        "bom_f1": 0.9895833333333334
+      },
+      "scanned": {
+        "n": 24,
+        "drawing_exact_match": 0.2916666666666667,
+        "scalar_field_exact_match_micro": 0.8240740740740741,
+        "tags_f1": 0.8800000000000001,
+        "dimensions_mm_f1": 0.9125475285171103,
+        "bom_f1": 0.8127490039840638
+      },
+      "failures": {
+        "iso_0001.png": [
+          "dimensions_mm"
+        ],
+        "iso_0002_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0006.png": [
+          "bom"
+        ],
+        "iso_0008.png": [
+          "dimensions_mm"
+        ],
+        "iso_0010.png": [
+          "dimensions_mm"
+        ],
+        "iso_0011_scan.png": [
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0012_scan.png": [
+          "drawing_number",
+          "dimensions_mm"
+        ],
+        "iso_0015.png": [
+          "dimensions_mm"
+        ],
+        "iso_0016.png": [
+          "tags"
+        ],
+        "iso_0018_scan.png": [
+          "drawing_number",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0019_scan.png": [
+          "tags",
+          "bom"
+        ],
+        "iso_0020_scan.png": [
+          "bom"
+        ],
+        "iso_0022_scan.png": [
+          "revision"
+        ],
+        "iso_0023_scan.png": [
+          "dimensions_mm"
+        ],
+        "iso_0026.png": [
+          "dimensions_mm"
+        ],
+        "iso_0028_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "dimensions_mm"
+        ],
+        "iso_0029_scan.png": [
+          "drawing_number",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "bom"
+        ],
+        "iso_0030_scan.png": [
+          "dimensions_mm"
+        ],
+        "iso_0031_scan.png": [
+          "tags"
+        ],
+        "iso_0035_scan.png": [
+          "bom"
+        ],
+        "iso_0038.png": [
+          "dimensions_mm"
+        ],
+        "iso_0042_scan.png": [
+          "drawing_number",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "tags",
+          "bom"
+        ],
+        "iso_0048_scan.png": [
+          "drawing_number",
+          "bom"
+        ],
+        "iso_0049.png": [
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0054_scan.png": [
+          "drawing_number",
+          "design_pressure_barg",
+          "design_temp_c",
+          "revision",
+          "dimensions_mm"
+        ],
+        "iso_0055.png": [
+          "dimensions_mm"
+        ],
+        "iso_0057_scan.png": [
+          "drawing_number",
+          "line_number",
+          "nominal_size_in",
+          "service",
+          "pipe_spec",
+          "material",
+          "design_pressure_barg",
+          "tags",
+          "dimensions_mm",
+          "bom"
+        ],
+        "iso_0059.png": [
+          "tags"
+        ]
+      },
+      "wall_s": 183.0
+    }
+  }
+}

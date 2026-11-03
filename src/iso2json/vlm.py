@@ -14,6 +14,7 @@ from __future__ import annotations
 import base64
 import io
 import os
+import re
 
 import numpy as np
 from PIL import Image
@@ -91,7 +92,8 @@ def refine_fields(rec: dict, problems: set[str], title_crop: np.ndarray, provide
         except Exception as e:  # network/model failure must not kill the pipeline
             log.append({"field": f, "error": repr(e)[:200]})
             continue
-        parsed = parse.parse_title_block([f"{label}: {ans}"]).get(f)
+        clean = re.sub(r"^\s*(answer|value)\s*:\s*", "", ans, flags=re.I).strip().rstrip(".").strip()
+        parsed = parse.parse_title_block([f"{label}: {clean}"]).get(f)
         old = rec.get(f)
         rec[f] = parsed
         accepted = parsed is not None and f not in validate(rec)
